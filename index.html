@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Keshav Sharma — Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <div id="progress"></div>
+  <div class="noise"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="./images/keshav.jpeg" class="menu-resume btn-outline" download>Resume ↗</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">KS</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div onclick="alert('Resume is not available currently')" class="menu-resume btn-outline" >Resume ↗</div>
+      <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-eyebrow">✦ FullStack Developer — React & Express</p>
+    <h1 class="hero-name">
+      <span class="glitch">KESHAV</span><br />
+      <span class="accent">SHARMA</span>
+    </h1>
+    <p class="hero-sub">
+      I build interactive UIs that feel alive — where code meets craft and every pixel has intention.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-lime">View Projects</a>
+      <a href="#contact" class="btn-outline">Let's Talk</a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll to explore
+    </div>
+    <div class="hero-number">01</div>
+  </section>
+
+  <!-- MARQUEE 1 -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">React</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">TypeScript</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">Motion</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">GSAP</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">Three.js</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">NodeJS</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">React</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">TypeScript</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">Motion</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">GSAP</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">Three.js</span>
+      <span class="marquee-item filled">•</span>
+      <span class="marquee-item">NodeJS</span>
+      <span class="marquee-item filled">•</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-visual reveal-left">
+      <div class="about-img-wrap">
+        <div>
+          <img src="./images/keshav.jpeg" alt="image">
+        </div>
+        <div class="about-tag">B.Tech CSE — 2024–2025 ( IPEC )</div>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <p class="section-label">— Who I Am</p>
+      <h2 class="section-title">FullStack<br />Craftsman.</h2>
+      <p class="about-desc">
+        A Fullstack developer who loves building interactive UIs with React and build strong backend. I believe great interfaces feel like magic — and I obsess over making that happen.
+      </p>
+      <div class="education-list">
+        <div class="edu-item stagger-1">
+          <div class="edu-dot"></div>
+          <div>
+            <div class="edu-title">Bachelor of Technology</div>
+            <div class="edu-sub">Computer Science & Engineering</div>
+            <div class="edu-year">2024 – 2028 · Inderprastha Engineering College Ghaziabad</div>
+          </div>
+        </div>
+        <div class="edu-item stagger-2">
+          <div class="edu-dot inactive"></div>
+          <div>
+            <div class="edu-title">Class 12th</div>
+            <div class="edu-sub">Science Stream · CBSE</div>
+            <div class="edu-year">2023 – 2025</div>
+          </div>
+        </div>
+        <div class="edu-item stagger-3">
+          <div class="edu-dot inactive"></div>
+          <div>
+            <div class="edu-title">Class 10th</div>
+            <div class="edu-sub">Science Stream · CBSE</div>
+            <div class="edu-year">2021 – 2023</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="stats-row reveal stagger-4">
+        <div class="stat-box">
+          <span class="stat-number" data-count="3">0</span>
+          <div class="stat-label">Projects Done</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number" data-count="12">0</span>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number" data-count="4">0</span>
+          <div class="stat-label">Years Coding</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="skills-header">
+      <div>
+        <p class="section-label reveal">— My Arsenal</p>
+        <h2 class="section-title reveal">Skills &<br />Technologies.</h2>
+      </div>
+      <p class="skills-header-note reveal">Building with the best tools the modern web has to offer.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal stagger-1"><img src="./images/html.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">HTML5</div>
+          <div class="skill-level">Foundation</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-2"><img src="./images/css.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">CSS3</div>
+          <div class="skill-level">Advanced</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-3"><img src="./images/js.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-level">Core</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-4">
+        <img src="./images/react.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">React</div>
+          <div class="skill-level">Primary</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-1">
+        <img src="./images/tailwind.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">Tailwind</div>
+          <div class="skill-level">Styling</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-2">
+        <img src="./images/motion.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">Motion</div>
+          <div class="skill-level">Animations</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-3">
+        <img src="./images/ts.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">TypeScript</div>
+          <div class="skill-level">Typed</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-4">
+        <img src="./images/redux.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">Redux</div>
+          <div class="skill-level">State</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-1">
+        <div class="skill-icon">🐻</div>
+        <div>
+          <div class="skill-name">Zustand</div>
+          <div class="skill-level">State</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-2">
+        <img src="./images/node.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">Node.js</div>
+          <div class="skill-level">Backend</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-3">
+        <img src="./images/expres.png" class="skill-icon"></img>
+        <div>
+          <div class="skill-name">Express.js</div>
+          <div class="skill-level">API</div>
+        </div>
+      </div>
+      <div class="skill-card reveal stagger-4">
+        <img src="./images/gsap.png" class="skill-icon" style="background-color: white;"></>
+        <div>
+          <div class="skill-name">GSAP</div>
+          <div class="skill-level">Animation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE 2 -->
+  <div class="marquee-wrap">
+    <div class="marquee-track rev">
+      <span class="marquee-item">Available for Work</span>
+      <span class="marquee-item filled">✦</span>
+      <span class="marquee-item">Open to Collaborations</span>
+      <span class="marquee-item filled">✦</span>
+      <span class="marquee-item">Building Cool Stuff</span>
+      <span class="marquee-item filled">✦</span>
+      <span class="marquee-item">Available for Work</span>
+      <span class="marquee-item filled">✦</span>
+      <span class="marquee-item">Open to Collaborations</span>
+      <span class="marquee-item filled">✦</span>
+      <span class="marquee-item">Building Cool Stuff</span>
+      <span class="marquee-item filled">✦</span>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-header">
+      <p class="section-label reveal">— Selected Work</p>
+      <h2 class="section-title reveal">Projects.</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal stagger-1">
+        <div class="project-card-inner">
+          <div>
+            <div class="project-num">01</div>
+            <div class="project-name">FlexShow</div>
+            <p class="project-desc">It is a sleek movie and TV show discovery app built with React, powered by the TMDB API — featuring real-time data, smooth animations, dark mode, and seamless browsing.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Motion</span>
+              <span class="project-tag">TMDB</span>
+            </div>
+          </div>
+          <a href="https://github.com/keshav5252/flexshow" class="project-link">View Project →</a>
+        </div>
+      </div>
+      <div class="project-card reveal stagger-2">
+        <div class="project-card-inner">
+          <div>
+            <div class="project-num">02</div>
+            <div class="project-name">Evento</div>
+            <p class="project-desc">Evento is a full-stack event management platform where users can create, explore, and join events.It supports role-based access, user registration management,and real-time updates with a clean,interactive UI.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">NodeJs</span>
+              <span class="project-tag">ExpressJs</span>
+              <span class="project-tag">TailwindCSS</span>
+              <span class="project-tag">Motion</span>
+            </div>
+          </div>
+          <a href="https://github.com/keshav5252/evento" class="project-link">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="reveal-left">
+      <p class="section-label">— Get In Touch</p>
+      <h2 class="contact-big">Let's Build<br /><span class="lime">Something<br />Amazing.</span></h2>
+      <p class="contact-desc">Have an idea or opportunity? I'm always open to discussing new projects and creative
+        challenges.</p>
+      <a href="#" class="btn-lime">Send Message ↗</a>
+    </div>
+    <div class="contact-links reveal-right">
+      <a href="https://www.linkedin.com/in/keshav-sharma-5509b223a/ " target="_blank" class="contact-link">
+        <div>
+          <div class="contact-link-label">LinkedIn</div>
+          <div class="contact-link-value">Keshav Sharma</div>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+      <a href="https://github.com/keshav5252" target="_blank" class="contact-link">
+        <div>
+          <div class="contact-link-label">GitHub</div>
+          <div class="contact-link-value">@keshav5252</div>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+      <a href="mailto:sharma.comkeshav@example.com" class="contact-link">
+        <div>
+          <div class="contact-link-label">Email</div>
+          <div class="contact-link-value">sharma.comkeshav@example.com</div>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+      <div class="available-badge">
+        <div class="pulse-dot"></div>
+        <div style="font-size:13px;color:var(--muted);">Available for new projects</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-copy">Keshav Sharma © 2026</div>
+    <div class="footer-made">Built with <span>♥</span> and too much coffee</div>
+  </footer>
+
+  <!-- MOBILE BOTTOM NAV -->
+  <nav class="mobile-bottom-nav">
+    <a href="#about" class="mob-nav-item">
+      <span class="mob-nav-icon">👤</span>About
+    </a>
+    <a href="#skills" class="mob-nav-item">
+      <span class="mob-nav-icon">⚡</span>Skills
+    </a>
+    <a href="#projects" class="mob-nav-item">
+      <span class="mob-nav-icon">📂</span>Projects
+    </a>
+    <a href="#contact" class="mob-nav-item">
+      <span class="mob-nav-icon">✉️</span>Contact
+    </a>
+  </nav>
+
+</body>
+
+</html>
